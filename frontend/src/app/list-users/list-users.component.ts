@@ -21,7 +21,8 @@ export class ListUsersComponent implements OnInit {
       (res) => {
         Swal.fire({
           title: 'Sucesso',
-          text: 'Todos os amigos foram sorteados e enviados por email',
+          text:
+            'Todos os amigos secretos foram sorteados e enviados por email!',
           icon: 'success',
           confirmButtonText: 'Ok',
         });
