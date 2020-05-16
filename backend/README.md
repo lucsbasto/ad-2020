@@ -1,4 +1,4 @@
-# AD-2019 - ADIRETO
+# AD-2020 - ADIRETO
 
 Aplicação de sorteio de amigo secreto
 
