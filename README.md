@@ -4,7 +4,7 @@
 
 ## Executando o back-end
 
-Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
+Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app/?target=_blank)
 
 1. Navegue até a pasta `backend` através do comando `cd backend`
 
