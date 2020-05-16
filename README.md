@@ -4,7 +4,7 @@
 
 ## Executando o back-end
 
-Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
+Backend disponivel em [Teste Adireto 2020](https://ad-2020.herokuapp.com/)
 
 1. Navegue até a pasta `backend` através do comando `cd backend`
 
@@ -22,7 +22,11 @@ Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
 
 4. Rode o projeto executando `yarn dev` ou `npm run dev`
 
+5. Mais informações sobre o backend no readme presente na pasta `backend`
+
 ## Executando o front-end
+
+Frontend disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
 
 1. Navegue até a pasta `frontend` através do comando `cd frontend`
 
