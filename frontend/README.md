@@ -2,18 +2,12 @@
 
 Aplicação de sorteio de amigo secreto
 
-Executando o front-end
+## Executando o front-end
+
 Navegue até a pasta frontend através do comando cd frontend
 
-Instale as dependências
+Instale as dependências utilizando o comando **yarn** ou **npm install**
 
-# yarn
+Certifique-se do back-end estar rodando na porta **5000** ou altere a porta na variável de ambiente de desenvolvimento em src/environments/environment.ts
 
-yarn
-
-# npm
-
-npm install
-Certifique-se do back-end estar rodando na porta 5000 ou altere a porta na variável de ambiente de desenvolvimento em src/environments/environment.ts
-
-Rode o projeto através do comando ng serve (https://cli.angular.io/) ou caso não tenha a CLI do Angular instalada, rode através do comando yarn start ou npm start
+Rode o projeto através do comando ng serve (https://cli.angular.io/) ou através do comando yarn start ou npm start
