@@ -2,6 +2,8 @@
 
 Aplicação de sorteio de amigo secreto
 
+Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
+
 ## Executando o front-end
 
 1. Navegue até a pasta frontend através do comando cd frontend
