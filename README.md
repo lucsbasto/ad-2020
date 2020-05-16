@@ -4,6 +4,8 @@
 
 ## Executando o back-end
 
+Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
+
 1. Navegue até a pasta `backend` através do comando `cd backend`
 
 2. Instale as dependências:
