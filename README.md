@@ -8,9 +8,12 @@ Problema do Amigo Secreto
 1. Crie um backend simples usando mongoose e algum framework web qualquer para salvar as pessoas (nome, email, amigo). 
 Um CRUD bem simples mesmo.
 
-2. Crie um frontend bem simples usando Angular ou React para listar, cadastrar, editar e apagar as pessoas e realizar o sorteio.
+2. Crie um frontend bem simples usando Angular ou React para listar, cadastrar, 
+editar e apagar as pessoas e realizar o sorteio.
 
-3. Crie um botão no frontend para realizar o sorteio e enviar para cada pessoa um email contendo o amigo sorteado. 
+3. Crie um botão no frontend para realizar o sorteio e enviar para cada pessoa um email 
+contendo o amigo sorteado. 
+
 Salve o nome de cada amigo sorteado (campo amigo)
 ```
 
