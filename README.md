@@ -4,7 +4,7 @@
 
 ## Executando o back-end
 
-Backend disponivel em [Teste Adireto 2020](https://ad-2020.herokuapp.com/)
+Api disponivel em [Teste Adireto 2020](https://ad-2020.herokuapp.com/)
 
 1. Navegue até a pasta `backend` através do comando `cd backend`
 
@@ -26,7 +26,7 @@ Backend disponivel em [Teste Adireto 2020](https://ad-2020.herokuapp.com/)
 
 ## Executando o front-end
 
-Frontend disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
+Disponivel em [Teste Adireto 2020](https://ad-2020.netlify.app)
 
 1. Navegue até a pasta `frontend` através do comando `cd frontend`
 
