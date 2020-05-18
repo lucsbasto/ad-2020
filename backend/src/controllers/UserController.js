@@ -1,6 +1,6 @@
-import * as Yup from 'yup';
-import User from '../models/User';
-import UserService from '../services/UserService';
+const Yup = require('yup');
+const User = require('../models/User');
+const UserService = require('../services/UserService');
 
 class UserController {
   async index(req, res) {
@@ -27,13 +27,14 @@ class UserController {
   async show(req, res) {
     try {
       const { id } = req.params;
-      if (!id) return res.status(403).json({ error: 'Id not sent' });
+      if (!id) return res.status(403).json({ error: 'Id não enviado' });
 
       if (!User.isValid(id))
-        return res.status(403).json({ error: 'This id is not valid' });
+        return res.status(403).json({ error: 'Esse id não é válido' });
 
       const user = await User.findById(id);
-      if (!user) return res.status(404).json({ error: 'User not found.' });
+      if (!user)
+        return res.status(404).json({ error: 'Usuário não encontrado.' });
 
       return res.json({ user });
     } catch (error) {
@@ -49,13 +50,15 @@ class UserController {
         .required(),
     });
     if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation fails' });
+      return res.status(400).json({ error: 'A validação falhou.' });
     }
     const { name, email } = req.body;
     const user_exists = await User.findOne({ email: req.body.email });
 
     if (user_exists)
-      return res.status(401).json({ error: 'User already exists !' });
+      return res
+        .status(401)
+        .json({ error: 'Esse usuário já existe no nosso banco de dados.' });
 
     const { _id } = await UserService.store(name, email);
     return res.status(201).json({ _id, name, email });
@@ -68,14 +71,14 @@ class UserController {
     });
 
     if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation fails' });
+      return res.status(400).json({ error: 'A validação falhou.' });
     }
 
     const { id } = req.params;
-    if (!id) return res.status(403).json({ error: 'Id not sent' });
+    if (!id) return res.status(403).json({ error: 'Id não enviado' });
 
     if (!User.isValid(id))
-      return res.status(403).json({ error: 'This id is not valid' });
+      return res.status(403).json({ error: 'Esse id não é válido' });
     const { name, email } = req.body;
     const { _id } = await UserService.update({ id, name, email });
     return res.json({ _id, name, email });
@@ -83,17 +86,18 @@ class UserController {
 
   async destroy(req, res) {
     const { id } = req.params;
-    if (!id) return res.status(403).json({ error: 'Id not sent' });
+    if (!id) return res.status(403).json({ error: 'Id não enviado' });
 
     if (!User.isValid(id))
-      return res.status(403).json({ error: 'This id is not valid' });
+      return res.status(403).json({ error: 'Esse id não é válido' });
     const user_exists = await User.findById(id);
     if (!user_exists)
-      return res.status(404).json({ error: 'User not found !' });
+      return res.status(404).json({ error: 'Usuário não encontrado!' });
     const deleted = UserService.destroy(id);
-    if (deleted) return res.status(200).json({ message: 'User deleted' });
+    if (deleted)
+      return res.status(200).json({ message: 'Usuário deletado com sucesso' });
     else return res.status(500).json({ message: 'Error' });
   }
 }
 
-export default new UserController();
+module.exports = new UserController();
